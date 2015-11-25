@@ -15,5 +15,12 @@
                 </args>
             </contacts>
         </routers>
+        <layout>
+            <updates>
+                <contactsspam>
+                    <file>edge/contactsspam.xml</file>
+                </contactsspam>
+            </updates>
+        </layout>
     </frontend>
 </config>
