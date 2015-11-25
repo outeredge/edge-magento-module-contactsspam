@@ -1,0 +1,60 @@
+<?php $email = Mage::getStoreConfig('trans_email/ident_general/email') ?>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
+<div class="contact-us">
+    <div class="text std">
+        <h1><?php echo Mage::helper('contacts')->__('Contact Us') ?></h1>
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('contact_page')->toHtml() ?>
+        <address><?php echo nl2br(Mage::getStoreConfig('general/store_information/address')) ?></address>
+        <p>
+            <?php echo $this->__('t: %s', Mage::getStoreConfig('general/store_information/phone')) ?><br>
+            <?php echo $this->__('f: %s', Mage::getStoreConfig('general/store_information/fax')) ?><br>
+            <?php echo $this->__('<a href="mailto:%s">e: %s</a>', $email, $email) ?>
+        </p>
+    </div>
+    <div class="form">
+        <form action="<?php echo $this->getFormAction(); ?>" id="contactForm" method="post">
+            <div class="fieldset">
+                <ul class="form-list">
+                    <li class="fields">
+                        <div class="field">
+                            <label for="name" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Name') ?></label>
+                            <div class="input-box">
+                                <input name="name" id="name" title="<?php echo Mage::helper('contacts')->__('Name') ?>" value="<?php echo $this->escapeHtml($this->helper('contacts')->getUserName()) ?>" class="input-text required-entry" type="text" />
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="email" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Email') ?></label>
+                            <div class="input-box">
+                                <input name="email" id="email" title="<?php echo Mage::helper('contacts')->__('Email') ?>" value="<?php echo $this->escapeHtml($this->helper('contacts')->getUserEmail()) ?>" class="input-text required-entry validate-email" type="text" />
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label for="telephone"><?php echo Mage::helper('contacts')->__('Telephone') ?></label>
+                        <div class="input-box">
+                            <input name="telephone" id="telephone" title="<?php echo Mage::helper('contacts')->__('Telephone') ?>" value="" class="input-text" type="text" />
+                        </div>
+                    </li>
+                    <li class="wide">
+                        <label for="comment" class="required"><em>*</em><?php echo Mage::helper('contacts')->__('Enquiry') ?></label>
+                        <div class="input-box">
+                            <textarea name="comment" id="comment" title="<?php echo Mage::helper('contacts')->__('Enquiry') ?>" class="textarea required-entry input-text" cols="5" rows="3"></textarea>
+                        </div>
+                    </li>
+                    <input type="text" name="first_name" value="" class="contact-first-name" />
+                </ul>
+            </div>
+            <div class="buttons-set">
+                <input type="text" name="hideit" id="hideit" value="" style="display:none !important;" />
+                <button type="submit" title="<?php echo Mage::helper('contacts')->__('Send') ?>" class="button"><?php echo Mage::helper('contacts')->__('Send') ?></button>
+            </div>
+        </form>
+    </div>
+    <div id="map"></div>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyBWuxmA1NDeuBRbg7UMV8lygIlwUSBW3Wk"></script>
+</div>
+<script type="text/javascript">
+//<![CDATA[
+    var contactForm = new VarienForm('contactForm', true);
+//]]>
+</script>

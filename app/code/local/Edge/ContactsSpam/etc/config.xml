@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Edge_ContactsSpam>
+            <version>1.0.0</version>
+        </Edge_ContactsSpam>
+    </modules>
+    <frontend>
+        <routers>
+            <contacts>
+                <args>
+                    <modules>
+                        <contactsspam before="Mage_Contacts">Edge_ContactsSpam</contactsspam>
+                    </modules>
+                </args>
+            </contacts>
+        </routers>
+    </frontend>
+</config>

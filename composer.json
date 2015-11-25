@@ -1,0 +1,24 @@
+{
+    "name": "outeredge/edge-magento-module-contactsspam",
+    "type": "magento-module",
+    "description": "Contacts Spam Module by outer/edge",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "outer/edge",
+            "email": "bruno@outeredgeuk.com"
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "extra": {
+        "map": [
+            ["app/code/local/Edge/ContactsSpam", "app/code/local/Edge/ContactsSpam"],
+            ["app/etc/modules/Edge_ContactsSpam.xml", "app/etc/modules/Edge_ContactsSpam.xml"],
+            ["app/design/frontend/base/default/template/edge/contactsspam/contactsspam.phtml", "app/design/frontend/base/default/template/edge/contactsspam/contactsspam.phtml"],
+            ["app/design/frontend/base/default/layout/edge/contactsspam.xml", "app/design/frontend/base/default/layout/edge/contactsspam.xml"],
+            ["skin/frontend/base/default/edge/contactsspam.css", "skin/frontend/base/default/edge/contactsspam.css"]
+        ]
+    }
+}
