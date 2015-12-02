@@ -3,7 +3,6 @@
     <contacts_index_index>
         <reference name="head">
             <action method="addCss"><stylesheet>edge/contactsspam.css</stylesheet></action>
-            <action method="addJs"><file>edge/contactsspam.js</file></action>
 	</reference>
     </contacts_index_index>
 </layout>

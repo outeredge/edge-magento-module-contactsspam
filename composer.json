@@ -17,8 +17,7 @@
             ["app/code/local/Edge/ContactsSpam", "app/code/local/Edge/ContactsSpam"],
             ["app/etc/modules/Edge_ContactsSpam.xml", "app/etc/modules/Edge_ContactsSpam.xml"],
             ["app/design/frontend/base/default/layout/edge/contactsspam.xml", "app/design/frontend/base/default/layout/edge/contactsspam.xml"],
-            ["skin/frontend/base/default/edge/contactsspam.css", "skin/frontend/base/default/edge/contactsspam.css"],
-            ["js/edge/contactsspam.js", "js/edge/contactsspam.js"]
+            ["skin/frontend/base/default/edge/contactsspam.css", "skin/frontend/base/default/edge/contactsspam.css"]
         ]
     }
 }

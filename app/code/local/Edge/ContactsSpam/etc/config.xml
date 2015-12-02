@@ -5,6 +5,23 @@
             <version>1.0.0</version>
         </Edge_ContactsSpam>
     </modules>
+    <global>
+        <models>
+            <contactsspam>
+                <class>Edge_ContactsSpam_Model</class>
+            </contactsspam>
+        </models>
+        <events>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <contactsspam_observer_block_output>
+                        <class>Edge_ContactsSpam_Model_Observer</class>
+                        <method>appendInput</method>
+                    </contactsspam_observer_block_output>
+                </observers>
+            </core_block_abstract_to_html_after>
+        </events>
+    </global>
     <frontend>
         <routers>
             <contacts>
