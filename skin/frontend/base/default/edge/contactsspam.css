@@ -1,4 +1,4 @@
 .contact-first-name {
     visibility:hidden;
-    display:none;
+    display:none !important;
 }
