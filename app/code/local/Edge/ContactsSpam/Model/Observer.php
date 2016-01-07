@@ -31,7 +31,7 @@ class Edge_ContactsSpam_Model_Observer
             $input->setAttribute('id', 'first-name');
             $input->setAttribute('title', 'First-Name');
             $input->setAttribute('value', '');
-            $input->setAttribute('class', 'input-text required-entry validate-email');
+            $input->setAttribute('class', 'input-text');
             $input->setAttribute('type', 'text');
 
             $label->appendChild($em);
